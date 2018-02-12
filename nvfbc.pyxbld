@@ -1,0 +1,9 @@
+from setuptools.extension import Extension
+
+def make_ext(modname, pyxfilename):
+    return Extension(
+        modname,
+        [pyxfilename],
+        libraries=['user32', 'kernel32'],
+        language='c++',
+    )
